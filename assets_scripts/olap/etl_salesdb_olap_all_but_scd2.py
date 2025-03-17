@@ -229,6 +229,6 @@ def main():
 if __name__ == '__main__':
     # Connect to salesdb (OLTP) and salesdwh (OLT)
     sourceDatabase = MySQLdb.connect(database = 'salesdb', user = 'user', password = 'password', port = 42333)
-    destDatabase = duckdb.connect(r'C:\Users\katep\OneDrive\Documents\Andreas\dimensional-data-modeling\assets_scripts\salesdwh.duckdb') # Change the path if you have your sales duckDB somewhere else
+    destDatabase = duckdb.connect(r'"D:\OneDrive\My_D_drive\Data_Science\Data_engineering_practice\Learn_data_engineering\Sql\DB\salesdwh.duckdb') # Change the path if you have your sales duckDB somewhere else
     dw_conn_wrapper = pygrametl.ConnectionWrapper(connection = destDatabase)
     main()
